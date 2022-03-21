@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom"
+        android:background="#33EEEEEE">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#66327C"/>
+
+        <ImageView
+            android:id="@+id/bottom_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/a1"
+            android:src="@drawable/icon_song" />
+        <TextView
+            android:id="@+id/bottom_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="告白气球"
+            android:layout_toRightOf="@id/bottom_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+        <TextView
+            android:id="@+id/bottom_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="周杰伦"
+            android:textSize="12sp"
+            android:layout_below="@id/bottom_song"
+            android:layout_alignStart="@id/bottom_song"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/bottom_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_next"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageView
+            android:id="@+id/bottom_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@id/bottom_next"
+            android:src="@drawable/icon_play" />
+
+        <ImageView
+            android:id="@+id/bottom_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@id/bottom_play"
+            android:src="@drawable/icon_last" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"></androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
